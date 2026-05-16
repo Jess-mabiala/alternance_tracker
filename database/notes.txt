@@ -1,0 +1,2 @@
+connection à la bdd:
+    -on crée un pool de connection qui permettra de se connecter

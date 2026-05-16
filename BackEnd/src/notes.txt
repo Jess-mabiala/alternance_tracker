@@ -1,0 +1,8 @@
+création du serveur express:
+    -npm init -y
+    -npm install express
+    -configuration de server.js
+
+connextion de la bd postgres au projet:
+    -npm install pg
+    -npm install dotenv (pour les variables d'environnement)
