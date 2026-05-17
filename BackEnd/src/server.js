@@ -1,21 +1,17 @@
 const express = require('express');
 const app = express();
+const helmet = require('helmet'); //sécurise les headers http
+const cors = require('cors'); //autorise le front next.js à appeler l'API
+require('dotenv').config();
+
+app.use(helmet());
+app.use(cors({origin:'http://localhost:3001'}));
 
 app.use(express.json());  //lancer le json
 
-//Routes
-app.get('/', (req,res) => {
-    res.json({message: 'Hello world!'});
-});
-
-app.get('/users', (req,res) =>{
-    res.json({id: 1, name: 'Jess'});
-});
-
-app.post('/users', (req, res) => {
-    const body = req.body;
-    res.status(201).json({created: body});
-});
+// Routes
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/users', require('./routes/users'));
 
 app.listen(3000, () => {
     console.log('serveur Express en écoute sur http://localhost:3000');
