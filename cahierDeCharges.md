@@ -111,14 +111,14 @@ Chaque candidature contient :
 
 ## 6. Modèle de données
 
-### Users
+### users
 - id
 - name
 - email
 - password
 - created_at
 
-### Applications
+### applications
 - id
 - user_id
 - company
@@ -131,14 +131,14 @@ Chaque candidature contient :
 - offer_link
 - notes
 
-### Interviews
+### interviews
 - id
 - application_id
 - date
 - type
 - notes
 
-### Reminders
+### reminders
 - id
 - user_id
 - title
