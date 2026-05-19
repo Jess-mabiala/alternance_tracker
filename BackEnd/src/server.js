@@ -12,6 +12,8 @@ app.use(express.json());  //lancer le json
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/users', require('./routes/users'));
+app.use('/api/users', require('./routes/applications'));
+
 
 app.listen(3000, () => {
     console.log('serveur Express en écoute sur http://localhost:3000');
